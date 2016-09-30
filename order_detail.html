@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="edge">
+
+    <style>
+      html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, form, button, dl, dt, dd, input, textarea {
+          margin: 0;
+          -webkit-box-sizing: border-box;
+          -webkit-tap-highlight-color: rgba(0,0,0,0);
+          word-wrap: break-word;
+          word-break: break-all;
+          padding: 0;
+          padding-top: 0px;
+          padding-right: 0px;
+          padding-bottom: 0px;
+          padding-left: 0px;
+          margin: 0;
+      }
+      body{
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 1em;
+        -webkit-text-size-adjust: none;
+      }
+      a{
+        text-decoration: none;
+        outline: none;
+      }
+      .clearfix:after {
+          visibility: hidden;
+          display: block;
+          font-size: 0;
+          content: " ";
+          clear: both;
+          height: 0;
+      }
+      .page-header{
+        text-align: center;
+        position: relative;
+      }
+      .header{
+        background: #fff;
+        border-bottom: 1px solid #ffd705;
+        border-bottom-color: #ddd;
+      }
+      .header .back-wrap{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 42px;
+        line-height: 42px;
+        padding: 0 30px 0 8px;
+      }
+      .header .i-back{
+        background-position: 0 -130px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 11px;
+        float: left;
+      }
+      .i-back {
+          width: 12px;
+          height: 20px;
+      }
+      .icon{
+        background-image: url(./assets/img/icon.562e2a26.png);
+        background-size: 150px 350px;
+        display: inline-block;
+      }
+      .header .page-name{
+        color: #444;
+      }
+      .page-name{
+        font-size: 19px;
+        line-height: 42px;
+        font-weight: bold;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin: 0 65px;
+        text-align: center;
+      }
+      .page-name-marquee {
+          display: inline-block;
+          white-space: nowrap;
+      }
+      .menu-content{
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        box-flex: 1;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
+        overflow: hidden;
+      }
+      .menuwrap {
+          -webkit-box-flex: 1;
+          -moz-box-flex: 1;
+          box-flex: 1;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -moz-box;
+          display: box;
+          -ms-touch-action: none;
+      }
+      .mainwrap {
+          -webkit-box-flex: 1;
+          -ms-flex: 1 0 auto;
+          -moz-box-flex: 1;
+          box-flex: 1;
+          height: 100%;
+          background-color: #fff;
+          overflow: hidden;
+      }
+      .asidewrap {
+          width: 85px;
+          height: 100%;
+          background-color: #efefef;
+          overflow: hidden;
+      }
+      .taglist {
+        width: 100%;
+      }
+      .tag {
+        width: 100%;
+        height:61px;
+        font-size: 14px;
+        color: #656565;
+        text-align: left;
+        position: relative;
+      }
+      .foodlistwrap {
+        position: relative;
+        width: 100%;
+      }
+      .foodlist {
+
+      }
+      .foodlist-label {
+          margin-left: 9px;
+          padding-left: 7px;
+          line-height: 30px;
+          background: #f7f7f7;
+          font-size: 12px;
+          font-weight: normal;
+          color: #656565;
+      }
+      .foodlist .fooditem:last-child {
+          border-bottom: 0;
+      }
+      .fooditem {
+          border-bottom: 1px solid #f0f0f0;
+          padding: 15px 0 10px;
+          margin-left: 9px;
+      }
+
+      .food-pic-wrap {
+          position: relative;
+          float: left;
+          width: 62px;
+          height: 62px;
+          text-align: center;
+          line-height: 62px;
+          overflow: hidden;
+      }
+      .food-cont {
+          margin-left: 72px;
+      }
+
+      .foodname {
+          max-height: 2.5em;
+          line-height: 1.25em;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          margin-right: 10px;
+          color: #2f2f2f;
+          font-size: 16px;
+      }
+
+      .food-desc {
+          margin-top: 5px;
+          line-height: 15px;
+          font-size: 12px;
+          color: #a9a9a9;
+      }
+
+      .food-content-sub {
+          line-height: 15px;
+          margin-top: 5px;
+          font-size: 12px;
+          color: #a9a9a9;
+      }
+      img.food-pic {
+        width: 82.6667px;
+        height: 62px;
+        margin-left: -10.3333px;
+        margin-top: 0px;
+        visibility: visible;
+      }
+      .foodop {
+          float: right;
+          margin-bottom: -10px;
+      }
+      .add-food {
+          text-align: left;
+          width: 35px;
+      }
+      .add-food, .remove-food {
+          height: 35px;
+          float: right;
+      }
+      .i-add-food {
+          width: 25px;
+          height: 25px;
+          background-position: -15px 0;
+      }
+      .foodop-num {
+          font-size: 15px;
+          height: 27px;
+          line-height: 27px;
+          min-width: 21px;
+          text-align: center;
+          float: right;
+      }
+      .remove-food {
+          width: 35px;
+          text-align: right;
+      }
+      .i-remove-food {
+          width: 25px;
+          height: 25px;
+          background-position: -15px -28px;
+      }
+      .food-price-region {
+          font-size: 0;
+          margin-top: 3px;
+      }
+      .food-price {
+          color: #fe4d3d;
+          font-size: 17px;
+      }
+      .tag {
+          width: 100%;
+          height: 61px;
+          font-size: 14px;
+          color: #656565;
+          text-align: left;
+          position: relative;
+      }
+      .tag.focus {
+          color: #f99b00;
+          background-color: #fff;
+          border-right: 1px solid #fff;
+      }
+      .tag.focus:before {
+          position: absolute;
+          content: '';
+          top: 18px;
+          left: 0;
+          width: 4px;
+          height: 23px;
+          background: #ffd300;
+      }
+      .tag-inner {
+          position: relative;
+          margin: 0 6px;
+          height: 60px;
+          border-bottom: 1px dotted #bfbfbf;
+      }
+      .tag-text {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 100%;
+          padding-left: 8px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-transform: translate(0,-50%);
+          -moz-transform: translate(0,-50%);
+          transform: translate(0,-50%);
+          overflow: hidden;
+          line-height: 17px;
+          max-height: 34px;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          display: box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+      }
+  </style>
+  </head>
+  <body>
+    <header class="header page-header">
+      <a href="#" class="back-wrap">
+        <i class="icon i-back"></i>
+      </a>
+      <h1 class="page-name"><span class="page-name-marquee">标题标题</span></h1>
+    </header>
+    <div class="menu-content" style="max-height: 100vmax">
+      <div class="menuwrap">
+        <div class="asidewrap" style="height:643px">
+          <div class="taglist">
+            <div class="tag"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
+            <div class="tag focus"><div class="tag-inner"><span class="tag-text">畅销菜</span></div></div>
+            <div class="tag"></div>
+            <div class="tag"></div>
+            <div class="tag"></div>
+            <div class="tag"></div>
+          </div>
+        </div>
+        <div class="mainwrap" style="height:643px">
+          <div class="foodlistwrap">
+            <div class="foodlist">
+              <h3 class="foodlist-label">热销</h3>
+              <ul>
+                <li class="fooditem"><div class="clearfix">
+                  <div class="food-pic-wrap">
+                    <img src="./assets/img/2a3582cf2d5f8b24dd173a9e2e059d2b243534.jpg.webp" alt="" class="food-pic">
+                  </div>
+                  <div class="food-cont">
+                    <div class="foodname">鸡尾酒</div>
+                    <div class="food-desc">鸡尾酒啦</div>
+                    <div class="food-content-sub">
+                      <span>月售&nbsp;0</span><span style="margin-left:4px">赞0</span>
+                    </div>
+                    <div class="foodop clearfix">
+                      <a href="" class="add-food">
+                        <i class="icon i-add-food"></i>
+                      </a>
+                      <span class="foodop-num">1</span>
+                      <a href="" class="remove-food"><i class="icon i-remove-food"></i></a>
+                    </div>
+                    <div class="food-price-region"><span class="food-price">¥26</span></div>
+                  </div>
+                </div></li>
+                <li class="fooditem"><div class="clearfix">
+                  <div class="food-pic-wrap">
+                    <img src="./assets/img/2a3582cf2d5f8b24dd173a9e2e059d2b243534.jpg.webp" alt="" class="food-pic">
+                  </div>
+                  <div class="food-cont">
+                    <div class="foodname">鸡尾酒</div>
+                    <div class="food-desc">鸡尾酒啦</div>
+                    <div class="food-content-sub">
+                      <span>月售&nbsp;0</span><span style="margin-left:4px">赞0</span>
+                    </div>
+                    <div class="foodop clearfix">
+                      <a href="" class="add-food">
+                        <i class="icon i-add-food"></i>
+                      </a>
+                      <span class="foodop-num">1</span>
+                      <a href="" class="remove-food"><i class="icon i-remove-food"></i></a>
+                    </div>
+                    <div class="food-price-region"><span class="food-price">¥26</span></div>
+                  </div>
+                </div></li>
+                <li class="fooditem"><div class="clearfix">
+                  <div class="food-pic-wrap">
+                    <img src="./assets/img/2a3582cf2d5f8b24dd173a9e2e059d2b243534.jpg.webp" alt="" class="food-pic">
+                  </div>
+                  <div class="food-cont">
+                    <div class="foodname">鸡尾酒</div>
+                    <div class="food-desc">鸡尾酒啦</div>
+                    <div class="food-content-sub">
+                      <span>月售&nbsp;0</span><span style="margin-left:4px">赞0</span>
+                    </div>
+                    <div class="foodop clearfix">
+                      <a href="" class="add-food">
+                        <i class="icon i-add-food"></i>
+                      </a>
+                      <span class="foodop-num">1</span>
+                      <a href="" class="remove-food"><i class="icon i-remove-food"></i></a>
+                    </div>
+                    <div class="food-price-region"><span class="food-price">¥26</span></div>
+                  </div>
+                </div></li>
+              </ul>
+            </div>
+            <div class="foodlist">
+              <h3 class="foodlist-label">热销</h3>
+              <ul>
+                <li class="fooditem"><div class="clearfix">
+                  <div class="food-pic-wrap">
+                    <img src="./assets/img/2a3582cf2d5f8b24dd173a9e2e059d2b243534.jpg.webp" alt="" class="food-pic">
+                  </div>
+                  <div class="food-cont">
+                    <div class="foodname">鸡尾酒</div>
+                    <div class="food-desc">鸡尾酒啦</div>
+                    <div class="food-content-sub">
+                      <span>月售&nbsp;0</span><span style="margin-left:4px">赞0</span>
+                    </div>
+                    <div class="foodop clearfix">
+                      <a href="" class="add-food">
+                        <i class="icon i-add-food"></i>
+                      </a>
+                      <span class="foodop-num">1</span>
+                      <a href="" class="remove-food"><i class="icon i-remove-food"></i></a>
+                    </div>
+                    <div class="food-price-region"><span class="food-price">¥26</span></div>
+                  </div>
+                </div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cart-mask"></div>
+      <div class="cart-dtl">
+        <div class="cart-dtl-icon">
+          <i class="ico-cart-active"></i>
+          <div class="cart-num"></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+
+    </footer>
+  </body>
+</html>
