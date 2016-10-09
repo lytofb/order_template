@@ -376,6 +376,10 @@
           font-size: 14px;
           text-align: center;
       }
+      .cart-btn-unavail .inner {
+          background-color: #ccc;
+          color: #fff;
+      }
       .cart-dtl {
           display: none;
           position: fixed;
@@ -491,6 +495,27 @@
           transform: rotate(45deg);
           background: #fff;
       }
+      .cart-dtl-item:last-child {
+          border-bottom: none;
+      }
+      .cart-price {
+          font-size: 20px;
+          margin-left: 4px;
+          color: #fb4e44;
+          line-height: 35px;
+      }
+      .cart-origin {
+          line-height: 35px;
+          font-size: 11px;
+          color: #999;
+      }
+      .cart-shipping {
+          display: block;
+          font-size: 12px;
+          margin-left: 4px;
+          margin-top: -7px;
+      }
+
   </style>
   </head>
   <body>
@@ -607,7 +632,7 @@
           </div>
         </div>
       </div>
-      <div class="cart-mask mask"></div>
+      <div class="cart-mask mask" style="display:none"></div>
       <div class="cart-dtl" id="cart-dtl">
         <div class="cart-dtl-icon">
           <i class="spec-ico-cart ico-cart-active"></i>
@@ -635,26 +660,63 @@
                 <span class="cart-dtl-price">12</span>
               </div>
             </div>
-            <div class="cart-dtl-tiem"></div>
+            <div class="cart-dtl-item">
+              <div style="overflow:hidden;height:35px">
+                <i class="cart-dtl-dot"></i>
+                <p class="cart-goods-name">Psssss</p>
+                <div class="cart-dtl-oprt">
+                  <a href="javascript:;" class="add-food">
+                    <i class="i-add-food icon"></i>
+                  </a>
+                  <span class="foodop-num">2</span>
+                  <a href="javascript:;" class="remove-food"><i class="icon i-remove-food"></i></a>
+                </div>
+                <span class="cart-dtl-price">12</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div id="cart" class="cart">
         <div class="cart-tip">
           <div class="cart-icon">
-            <i class="spec-ico-cart ico-cart-active"></i>
-            <div class="cart-num">2</div>
+            <i class="spec-ico-cart"></i>
+            <div class="cart-num" style="display:none">2</div>
           </div>
-          <div class="cart-noempty"></div>
+          <div class="cart-noempty" style="display:none">
+            <span class="cart-price">￥0.04</span>
+            <del class="cart-origin"></del>
+            <br>
+            <span class="cart-shipping"></span>
+          </div>
           <div class="cart-empty">购物车空空如也</div>
         </div>
         <div class="cart-btns">
-          <a href="javascript:;" class="cart-btn-confirm"><span class="inner">去结算</span></a>
+          <a href="javascript:;" class="cart-btn-confirm" style="display:none"><span class="inner">去结算</span></a>
+          <a href="javascript:;" class="cart-btn-unavail"><span class="inner">未点菜</span></a>
         </div>
       </div>
     </div>
     <footer>
 
     </footer>
+    <script src="./assets/js/zepto.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var toggle_dtl = function(){
+        $(".cart-icon").toggle();
+        $(".mask").toggle();
+        $(".cart-dtl").toggle()
+      }
+      var open_dtl = function(){
+        $(".cart-icon").hide();
+        $(".mask").show();
+        $(".cart-dtl").show()
+      }
+      var close_dtl = function(){
+        $(".cart-icon").show();
+        $(".mask").hide();
+        $(".cart-dtl").hide()
+      }
+    </script>
   </body>
 </html>
