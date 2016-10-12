@@ -333,6 +333,12 @@
           -moz-background-size: 50px auto;
           background-size: 50px auto;
       }
+      .ico-cart {
+          background-position: 0 0;
+      }
+      .ico-cart.ico-cart-active {
+          background-position: 0 -57px;
+      }
       i {
           font-style: normal;
       }
@@ -530,20 +536,20 @@
         <div class="asidewrap" style="height:643px">
           <div class="taglist">
             <div class="tag"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
-            <div class="tag focus"><div class="tag-inner"><span class="tag-text">畅销菜</span></div></div>
-            <div class="tag"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
-            <div class="tag"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
-            <div class="tag"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
-            <div class="tag"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
-            <div class="tag"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
-            <div class="tag"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
-            <div class="tag"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
-            <div class="tag"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
-            <div class="tag"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
-            <div class="tag"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
-            <div class="tag"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
-            <div class="tag"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
-            <div class="tag"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
+            <div class="tag focus" data="foodla"><div class="tag-inner"><span class="tag-text">畅销菜</span></div></div>
+            <div class="tag" data="foodlb"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
+            <div class="tag" data="foodlc"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
+            <div class="tag" data="foodld"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
+            <div class="tag" data="foodld"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
+            <div class="tag" data="foodld"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
+            <div class="tag" data="foodld"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
+            <div class="tag" data="foodld"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
+            <div class="tag" data="foodld"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
+            <div class="tag" data="foodld"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
+            <div class="tag" data="foodld"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
+            <div class="tag" data="foodld"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
+            <div class="tag" data="foodld"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
+            <div class="tag" data="foodld"><div class="tag-inner"><span class="tag-text">拿手菜</span></div></div>
           </div>
         </div>
         <div class="mainwrap" style="height:643px">
@@ -551,7 +557,7 @@
             <div class="foodlist">
               <h3 class="foodlist-label">热销</h3>
               <ul>
-                <li class="fooditem"><div class="clearfix">
+                <li class="fooditem" foodid="000001"><div class="clearfix">
                   <div class="food-pic-wrap">
                     <img src="./assets/img/2a3582cf2d5f8b24dd173a9e2e059d2b243534.jpg.webp" alt="" class="food-pic">
                   </div>
@@ -565,13 +571,13 @@
                       <a href="" class="add-food">
                         <i class="icon i-add-food"></i>
                       </a>
-                      <span class="foodop-num">1</span>
-                      <a href="" class="remove-food"><i class="icon i-remove-food"></i></a>
+                      <span class="foodop-num" style="display:none">0</span>
+                      <a href="" class="remove-food" style="display:none"><i class="icon i-remove-food"></i></a>
                     </div>
                     <div class="food-price-region"><span class="food-price">¥26</span></div>
                   </div>
                 </div></li>
-                <li class="fooditem"><div class="clearfix">
+                <li class="fooditem" foodid="000002"><div class="clearfix">
                   <div class="food-pic-wrap">
                     <img src="./assets/img/2a3582cf2d5f8b24dd173a9e2e059d2b243534.jpg.webp" alt="" class="food-pic">
                   </div>
@@ -585,13 +591,13 @@
                       <a href="" class="add-food">
                         <i class="icon i-add-food"></i>
                       </a>
-                      <span class="foodop-num">1</span>
-                      <a href="" class="remove-food"><i class="icon i-remove-food"></i></a>
+                      <span class="foodop-num" style="display:none">0</span>
+                      <a href="" class="remove-food" style="display:none"><i class="icon i-remove-food"></i></a>
                     </div>
                     <div class="food-price-region"><span class="food-price">¥26</span></div>
                   </div>
                 </div></li>
-                <li class="fooditem"><div class="clearfix">
+                <li class="fooditem" foodid="000003"><div class="clearfix">
                   <div class="food-pic-wrap">
                     <img src="./assets/img/2a3582cf2d5f8b24dd173a9e2e059d2b243534.jpg.webp" alt="" class="food-pic">
                   </div>
@@ -605,8 +611,8 @@
                       <a href="" class="add-food">
                         <i class="icon i-add-food"></i>
                       </a>
-                      <span class="foodop-num">1</span>
-                      <a href="" class="remove-food"><i class="icon i-remove-food"></i></a>
+                      <span class="foodop-num" style="display:none">0</span>
+                      <a href="" class="remove-food" style="display:none"><i class="icon i-remove-food"></i></a>
                     </div>
                     <div class="food-price-region"><span class="food-price">¥26</span></div>
                   </div>
@@ -616,7 +622,7 @@
             <div class="foodlist" id="foodla">
               <h3 class="foodlist-label">热销</h3>
               <ul>
-                <li class="fooditem"><div class="clearfix">
+                <li class="fooditem" foodid="000004"><div class="clearfix">
                   <div class="food-pic-wrap">
                     <img src="./assets/img/2a3582cf2d5f8b24dd173a9e2e059d2b243534.jpg.webp" alt="" class="food-pic">
                   </div>
@@ -636,7 +642,7 @@
                     <div class="food-price-region"><span class="food-price">¥26</span></div>
                   </div>
                 </div></li>
-                <li class="fooditem"><div class="clearfix">
+                <li class="fooditem" foodid="000005"><div class="clearfix">
                   <div class="food-pic-wrap">
                     <img src="./assets/img/2a3582cf2d5f8b24dd173a9e2e059d2b243534.jpg.webp" alt="" class="food-pic">
                   </div>
@@ -656,7 +662,7 @@
                     <div class="food-price-region"><span class="food-price">¥26</span></div>
                   </div>
                 </div></li>
-                <li class="fooditem"><div class="clearfix">
+                <li class="fooditem" foodid="000006"><div class="clearfix">
                   <div class="food-pic-wrap">
                     <img src="./assets/img/2a3582cf2d5f8b24dd173a9e2e059d2b243534.jpg.webp" alt="" class="food-pic">
                   </div>
@@ -969,8 +975,8 @@
       <div class="cart-mask mask" style="display:none"></div>
       <div class="cart-dtl" id="cart-dtl">
         <div class="cart-dtl-icon">
-          <i class="spec-ico-cart ico-cart-active"></i>
-          <div class="cart-num">2</div>
+          <i class="ico-cart ico-cart-active"></i>
+          <div class="cart-num" style="display:none">0</div>
         </div>
         <div class="cart-dtl-head">
           <span class="box-fee">餐盒费3元</span>
@@ -1014,8 +1020,8 @@
       <div id="cart" class="cart">
         <div class="cart-tip">
           <div class="cart-icon">
-            <i class="spec-ico-cart"></i>
-            <div class="cart-num" style="display:none">2</div>
+            <i class="ico-cart"></i>
+            <div class="cart-num" style="display:none">0</div>
           </div>
           <div class="cart-noempty" style="display:none">
             <span class="cart-price">￥0.04</span>
@@ -1037,6 +1043,79 @@
     <script src="./assets/js/zepto.min.js" charset="utf-8"></script>
     <script src="./assets/js/iscroll.js" charset="utf-8"></script>
     <script type="text/javascript">
+    ;(function($){
+      var zepto = $.zepto, oldQsa = zepto.qsa, oldMatches = zepto.matches
+
+      function visible(elem){
+        elem = $(elem)
+        return !!(elem.width() || elem.height()) && elem.css("display") !== "none"
+      }
+
+      // Implements a subset from:
+      // http://api.jquery.com/category/selectors/jquery-selector-extensions/
+      //
+      // Complex selectors are not supported:
+      //   li:has(label:contains("foo")) + li:has(label:contains("bar"))
+      //   "> h2"
+      //   ul.inner:first > li
+      var filters = {
+        visible: function(){ return visible(this) },
+        hidden: function(){ return !visible(this) },
+        selected: function(){ return this.selected },
+        checked: function(){ return this.checked },
+        first: function(idx){ return idx === 0 },
+        eq: function(idx, value){ return idx === value },
+        contains: function(idx, text){ return $(this).text().indexOf(text) > -1 },
+        has: function(idx, sel){ return zepto.qsa(this, sel).length }
+      }
+
+      var re = new RegExp('(.*):(\\w+)(?:\\(([^)]+)\\))?$\\s*')
+
+      function process(sel, fn) {
+        var filter, arg, match = sel.match(re)
+        if (match && match[2] in filters) {
+          var filter = filters[match[2]], arg = match[3]
+          sel = match[1]
+          if (arg) {
+            var num = Number(arg)
+            if (isNaN(num)) arg = arg.replace(/^["']|["']$/g, '')
+            else arg = num
+          }
+        }
+        return fn(sel, filter, arg)
+      }
+
+      zepto.qsa = function(node, selector) {
+        return process(selector, function(sel, filter, arg){
+          try {
+            if (!sel && filter) sel = '*'
+            var nodes = oldQsa(node, sel)
+          } catch(e) {
+            console.error('error performing selector: %o', selector)
+            throw e
+          }
+          return !filter ? nodes : nodes.filter(function(el, i){ return filter.call(el, i, arg) })
+        })
+      }
+
+      zepto.matches = function(node, selector){
+        return process(selector, function(sel, filter, arg){
+          return (!sel || oldMatches(node, sel)) &&
+            (!filter || filter.call(node, null, arg))
+        })
+      }
+    })(Zepto)
+    </script>
+    <script type="text/javascript">
+      var foodOrderDict = {
+      "000001":{"count":0,"price":5,"name":"1号"},
+      "000002":{"count":0,"price":5,"name":"2号"},
+      "000003":{"count":0,"price":5,"name":"3号"},
+      "000004":{"count":0,"price":5,"name":"4号"},
+      "000005":{"count":0,"price":5,"name":"5号"},
+      "000006":{"count":0,"price":5,"name":"6号"}
+    };
+
       var toggle_dtl = function(){
         $(".cart-icon").toggle();
         $(".mask").toggle();
@@ -1052,9 +1131,101 @@
         $(".mask").hide();
         $(".cart-dtl").hide()
       }
+      var refocus = function(el){
+        $(".focus").siblings().each(function(index){
+          $(this).removeClass("focus");
+        })
+        $(".focus").removeClass("focus");
+        el.addClass("focus")
+      }
+      var cartnumchange = function(num) {
+        var nowcartnum = $(".cart-num:visible").text();
+        var newcartnum = Number(nowcartnum)+num;
+        newcartnum = newcartnum>-1?newcartnum:0;
+        if (newcartnum==0) {
+          $(".cart-empty").show();
+          $(".cart-noempty").hide();
+          $(".cart-num").hide()
+          $(".ico-cart").removeClass("ico-cart-active")
+        } else {
+          $(".cart-empty").hide();
+          $(".cart-noempty").show();
+          $(".cart-num").show()
+          $(".ico-cart").addClass("ico-cart-active")
+        }
+        $(".cart-num").each(function(index) {
+          $(this).text(newcartnum);
+        });
+      }
+      var addfoodcount = function(foodid){
+        return changefoodcount(foodid,true)
+      }
+      var minusfoodcount = function(foodid){
+        return changefoodcount(foodid,false)
+      }
+      var changefoodcount = function(foodid,flag){
+        var localFoodOrderDict = getFoodOrderDict()
+        if (localFoodOrderDict) {
+          var foodinfo = localFoodOrderDict[foodid];
+          if (foodinfo) {
+            if(flag) {
+              foodinfo["count"] = foodinfo["count"]+1;
+            } else {
+              var foodminuscount = foodinfo["count"]-1
+              foodinfo["count"] = foodminuscount>-1?foodminuscount:0;
+            }
+            localFoodOrderDict[foodid] = foodinfo;
+            localStorage.setItem("foodOrderInfo",JSON.stringify(localFoodOrderDict));
+            return foodinfo["count"];
+          } else {
+            return 0;
+          }
+        } else {
+          return 0;
+        }
+      }
+
+      var getFoodOrderDict = function(){
+        var localFoodOrderDict = localStorage.getItem("foodOrderInfo")
+        if (localFoodOrderDict) {
+          foodOrderDict = JSON.parse(localFoodOrderDict);
+        } else {
+          localStorage.setItem("foodOrderInfo",JSON.stringify(foodOrderDict))
+        }
+        return foodOrderDict;
+      }
       Zepto(function($){
         mainScroll = new IScroll(".mainwrap");new IScroll(".asidewrap");
-      })
+
+        $(".tag").on('touchend.tap',function(){
+          var fooditemid = "#"+$(this).attr("data");
+          var el = $(this);
+          refocus(el)
+          mainScroll.scrollToElement(fooditemid);
+        })
+
+      });
+
+        $(".add-food").on('touchend.tap',function(){
+          var $numspan = $(this).next();
+          var foodid = $(this).parents(".fooditem").attr("foodid");
+          var addresult = addfoodcount(foodid);
+          cartnumchange(1)
+          $numspan.show();
+          $numspan.text(addresult);
+          $numspan.next().show();
+        })
+        $(".remove-food").on('touchend.tap',function(){
+          var $numspan = $(this).prev();
+          var foodid = $(this).parents(".fooditem").attr("foodid");
+          var minusresult = minusfoodcount(foodid);
+          cartnumchange(-1)
+          if (minusresult==0) {
+            $numspan.hide();
+            $(this).hide();
+          }
+          $numspan.text(minusresult)
+        })
     </script>
   </body>
 </html>
